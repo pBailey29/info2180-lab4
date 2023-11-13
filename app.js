@@ -1,8 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {  
-    
+    let resultDiv = document.getElementById('result');
+    let searchInput = document.getElementById('hero-data');
+
     document.getElementById('searchButton').addEventListener('click', function () {
-        console.log("hello")
-        fetch(`superheroes.php`)
+        fetch(`superheroes.php?query=${searchInput.value}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
@@ -10,10 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 return response.text();
             })
             .then(superheroes => {
-                alert(superheroes);
+                resultDiv.innerHTML = superheroes
             })
-            .catch(error => {
-                console.error('There was a problem with the fetch operation:', error);
-            });
+            .catch(error => alert(error))
     });
 })

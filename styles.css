@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    background-color: rgb(25, 161, 179);
+    margin-bottom: 16px;
+}
+
+header h1 {
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.search-bar {
+    display: flex;
+    gap: 1px;
+    margin-top: 5px;
+}
+
+.search-bar #hero-data {
+    width: 80%;
+    padding-left: 12px;
+    box-shadow: rgb(66, 66, 66);
+}
+
+.search-bar #searchButton {
+    padding: 12px 28px;
+    color: white;
+    background-color: rgb(153, 25, 16);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.result {
+    text-transform: uppercase;
+    margin-top: 32px;
+}
+
+hr {
+    margin: 10px 0;
+}
+
+#result h4 {
+    margin-bottom: 16px;
+}
+
+.not-found {
+    color: #b31919;
+}
